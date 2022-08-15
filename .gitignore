@@ -1,0 +1,9 @@
+node_modules
+.vscode-test/
+*.vsix
+
+### OSX ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
