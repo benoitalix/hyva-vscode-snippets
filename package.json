@@ -1,0 +1,44 @@
+{
+  "name": "hyva-vscode-snippets",
+  "displayName": "Hyvä VSCode snippets",
+  "description": "A collection of Hyvä code snippets for Visual Studio Code",
+  "version": "0.1.0",
+  "publisher": "Benoit Alix",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "homepage": "https://github.com/balix/hyva-vscode-snippets.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balix/hyva-vscode-snippets.git"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "hyva",
+    "magento",
+    "snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
