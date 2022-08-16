@@ -1,276 +1,276 @@
 {
-	"Hyvä Alpine.js Object console.log": {
-		"scope": "html,javascript",
-		"prefix": "hyva.alpine.consoleLogObject",
-		"body": [
-			"console.log(JSON.parse(JSON.stringify(${1:object})));"
-		],
-		"description": "Console log Object in Alpine.js"
-	},
-	"Hyvä Alpine.js new component": {
-		"scope": "html",
-		"prefix": "hyva.alpine.newComponent",
-		"body": [
-			"<script>",
-			"\t'use strict';",
-			"\tfunction initNewComponent() {",
-			"\t\treturn {",
-			"\t\t\tmessage: 'Hello world !'",
-			"\t\t};",
-			"\t}",
-			"</script>",
-			"\n<div x-data=\"initNewComponent()\">",
-			"\t<span x-text=\"message\"></span>",
-			"</div>"
-		],
-		"description": "Add Alpine.js new component"
-	},
-	"Hyvä Alpine.js listen to private content loaded event": {
-		"scope": "html",
-		"prefix": "hyva.alpine.listenPrivateContentLoaded",
-		"body": [
-			"@private-content-loaded.window=\"console.log(event.detail.data);\""
-		],
-		"description": "Listen to all customer section data loading"
-	},
-	"Hyvä Alpine.js listen to update product final price event": {
-		"scope": "html",
-		"prefix": "hyva.alpine.listenProductFinalPrice",
-		"body": [
-			"@update-product-final-price.window=\"console.log(event.detail);\""
-		],
-		"description": "Listen to product final price event"
-	},
-	"Hyvä JavaScript dispatch reload customer section data event": {
-		"scope": "html, javascript",
-		"prefix": "hyva.js.dispatchReloadCustomerSectionData",
-		"body": [
-			"window.dispatchEvent(new CustomEvent(\"reload-customer-section-data\"));"
-		],
-		"description": "Dispatch reload customer section data event"
-	},
-	"Hyvä JavaScript dispatch toggle mobile menu event": {
-		"scope": "html, javascript",
-		"prefix": "hyva.js.dispatchToggleMobileMenu",
-		"body": [
-			"window.dispatchEvent(new CustomEvent(\"toggle-mobile-menu\"));"
-		],
-		"description": "Dispatch toggle mobile menu event"
-	},
-	"Hyvä JavaScript dispatch toggle authentication event": {
-		"scope": "html, javascript",
-		"prefix": "hyva.js.dispatchAuthentication",
-		"body": [
-			"window.dispatchEvent(new CustomEvent(\"toggle-authentication\"));"
-		],
-		"description": "Dispatch toggle authentication event"
-	},
-	"Hyvä JavaScript dispatch toggle cart event": {
-		"scope": "html, javascript",
-		"prefix": "hyva.js.dispatchToggleCart",
-		"body": [
-			"window.dispatchEvent(new CustomEvent(\"toggle-cart\"));"
-		],
-		"description": "Dispatch toggle cart event"
-	},
-	"Hyvä load external JavaScript": {
-		"scope": "html",
-		"prefix": "hyva.js.loadExternalLib",
-		"body": [
-			"<script>",
-    		"\t'use strict';",
-    		"\t\t(function () {",
-        	"\t\t\twindow.addEventListener('DOMContentLoaded', () => {",
+    "Hyvä Alpine.js Object console.log": {
+        "scope": "html,javascript",
+        "prefix": "hyva.alpine.consoleLogObject",
+        "body": [
+            "console.log(JSON.parse(JSON.stringify(${1:object})));"
+        ],
+        "description": "Console log Object in Alpine.js"
+    },
+    "Hyvä Alpine.js new component": {
+        "scope": "html",
+        "prefix": "hyva.alpine.newComponent",
+        "body": [
+            "<script>",
+            "\t'use strict';",
+            "\tfunction initNewComponent() {",
+            "\t\treturn {",
+            "\t\t\tmessage: 'Hello world !'",
+            "\t\t};",
+            "\t}",
+            "<\/script>",
+            "\n<div x-data=\"initNewComponent()\">",
+            "\t<span x-text=\"message\"><\/span>",
+            "<\/div>"
+        ],
+        "description": "Add Alpine.js new component"
+    },
+    "Hyvä Alpine.js listen to private content loaded event": {
+        "scope": "html",
+        "prefix": "hyva.alpine.listenPrivateContentLoaded",
+        "body": [
+            "@private-content-loaded.window=\"console.log(event.detail.data);\""
+        ],
+        "description": "Listen to all customer section data loading"
+    },
+    "Hyvä Alpine.js listen to update product final price event": {
+        "scope": "html",
+        "prefix": "hyva.alpine.listenProductFinalPrice",
+        "body": [
+            "@update-product-final-price.window=\"console.log(event.detail);\""
+        ],
+        "description": "Listen to product final price event"
+    },
+    "Hyvä JavaScript dispatch reload customer section data event": {
+        "scope": "html, javascript",
+        "prefix": "hyva.js.dispatchReloadCustomerSectionData",
+        "body": [
+            "window.dispatchEvent(new CustomEvent(\"reload-customer-section-data\"));"
+        ],
+        "description": "Dispatch reload customer section data event"
+    },
+    "Hyvä JavaScript dispatch toggle mobile menu event": {
+        "scope": "html, javascript",
+        "prefix": "hyva.js.dispatchToggleMobileMenu",
+        "body": [
+            "window.dispatchEvent(new CustomEvent(\"toggle-mobile-menu\"));"
+        ],
+        "description": "Dispatch toggle mobile menu event"
+    },
+    "Hyvä JavaScript dispatch toggle authentication event": {
+        "scope": "html, javascript",
+        "prefix": "hyva.js.dispatchAuthentication",
+        "body": [
+            "window.dispatchEvent(new CustomEvent(\"toggle-authentication\"));"
+        ],
+        "description": "Dispatch toggle authentication event"
+    },
+    "Hyvä JavaScript dispatch toggle cart event": {
+        "scope": "html, javascript",
+        "prefix": "hyva.js.dispatchToggleCart",
+        "body": [
+            "window.dispatchEvent(new CustomEvent(\"toggle-cart\"));"
+        ],
+        "description": "Dispatch toggle cart event"
+    },
+    "Hyvä load external JavaScript": {
+        "scope": "html",
+        "prefix": "hyva.js.loadExternalLib",
+        "body": [
+            "<script>",
+            "\t'use strict';",
+            "\t\t(function () {",
+            "\t\t\twindow.addEventListener('DOMContentLoaded', () => {",
             "\t\t\t\tconst script = document.createElement('script')",
             "\t\t\t\tscript.src = '<?= $escaper->escapeUrl($block->getViewFileUrl('${1:Vendor_ModuleName}::js/my-library.js')) ?>';",
             "\t\t\t\tscript.addEventListener('load', () => ${2:initSomething}());",
             "\t\t\t\tdocument.head.append(script);",
-        	"\t\t\t});",
-    		"\t\t})();",
-			"</script>"
-		],
-		"description": "Load a vanilla JS library from vanilla JS"
-	},
-	"Hyvä Ajax form post with fetch": {
-		"scope": "html, javascript",
-		"prefix": "hyva.js.ajaxFormPostWithFetch",
-		"body": [
-			"fetch(",
-			"\turl + '?form_key=' + hyva.getFormKey(),",
-			"\t{",
-			"\t\tmethod: 'post',",
-			"\t\tbody: JSON.stringify(data),",
-			"\t\theaders: {contentType: 'application/json'}",
-			"\t}",
-			");"
-		],
-		"description": "Ajax POST fetch request with JSON data"
-	},
-	"Hyvä Ajax request with fetch": {
-		"scope": "html, javascript",
-		"prefix": "hyva.js.ajaxRequestWithFetch",
-		"body": [
-			"fetch(`${BASE_URL}path/to/ajax/call`, {",
-			"\tmethod: \"GET\",",
-			"\theaders: {",
-			"\t\t\"X-Requested-With\": \"XMLHttpRequest\",",
-			"\t},",
-			"})",
-			"\t.then(response => {",
-			"\t\tif (response.ok) {",
-			"\t\t\treturn response.json();",
-			"\t\t} else {",
-			"\t\tconsole.warn(\"GET request failed\", response);",
-			"\t\t}",
-			"\t})",
-			"\t.then(data => {",
-			"\t\tif (data) {",
-			"\t\t//do something",
-			"\t\t}",
-			"\t});"
-		],
-		"description": "Use the fetch API to simulate an Ajax request with the XMLHttpRequest object"
-	},
-	"Hyvä getCookie": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.getCookie",
-		"body": [
-			"hyva.getCookie(${1:name});"
-		],
-		"description": "Hyvä getCookie get a given cookie value"
-	},
-	"Hyvä setCookie": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.setCookie",
-		"body": [
-			"hyva.setCookie(${1:name}, ${2:value});"
-		],
-		"description": "Hyvä setCookie skip setting the domain on the cookie"
-	},
-	"Hyvä getBrowserStorage": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.getBrowserStorage",
-		"body": [
-			"hyva.getBrowserStorage();"
-		],
-		"description": "Hyvä getBrowserStorage returns either the native localStorage, if it is available, or tries to fall back to the sessionStorage object"
-	},
-	"Hyvä postForm": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.postForm",
-		"body": [
-			"hyva.postForm(",
-			"\taction: 'https://example.test/custom_quote/move/inQuote/',",
-			"\tdata: { id: '<?= $$escaper->escapeJs($$block->getQuoteId()) ?>' }",
-			");"
-		],
-		"description": "Hyvä postForm first creates a new <form> element, then adds hidden fields for a given data object, and finally submits the created form"
-	},
-	"Hyvä strf": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.strf",
-		"body": [
-			"hyva.srtf('%1 %0 %2', 'a', 'b', 'c'); // => \"b a c\""
-		],
-		"description": "Hyvä strf replaces positional parameters like %0 with the additional argument in the matching position. The first additional argument replaces %0, the second %1, and so on"
-	},
-	"Hyvä replaceDomElement": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.replaceDomElement",
-		"body": [
-			"hyva.replaceDomElement(${1:targetSelector}, ${2:content});"
-		],
-		"description": "Hyvä replaceDomElement replaces the DOM element specified by targetSelector with the HTML string content"
-	},
-	"Hyvä getFormKey": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.getFormKey",
-		"body": [
-			"hyva.getFormKey();"
-		],
-		"description": "Hyvä getFormKey returns the current form key value"
-	},
-	"Hyvä formatPrice": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.formatPrice",
-		"body": [
-			"hyva.formatPrice(${1:value})"
-		],
-		"description": "Hyvä formatPrice formats and returns the given value using the current currency"
-	},
-	"Hyvä JavaScript Base URL": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.baseURL",
-		"body": [
-			"`${BASE_URL}example/path/action`"
-		],
-		"description": "Hyvä JavaScript Base URL builder"
-	},
-	"Hyvä JavaScript current store code": {
-		"scope": "html",
-		"prefix": "hyva.js.currentStoreCode",
-		"body": [
-			"`${CURRENT_STORE_CODE}/example/path/action`"
-		],
-		"description": "Hyvä JavaScript store code builder"
-	},
-	"Hyvä JavaScript dispatchMessages": {
-		"scope": "html,javascript",
-		"prefix": "hyva.js.dispatchMessages",
-		"body": [
-			"window.dispatchMessages([",
-				"\t{",
-					"\t\ttype: \"${1|success,notice,warning,error|}\",",
-					"\t\ttext: \"<?= $$escaper->escapeHtmlAttr(__('${2:Message}')) ?>\"",
-				"\t}",
-			"], 2000);"	
-		],
-		"description": "Hyvä JavaScript store code builder"
-	},
-	"Hyvä PHP Base URL": {
-		"scope": "html",
-		"prefix": "hyva.php.baseURL",
-		"body": [
-			"'<?= $$escaper->escapeUrl($block->getBaseUrl()) ?>example/path/action'"
-		],
-		"description": "Hyvä PHP Base URL builder"
-	},
-	"Hyvä Heroicons view models require": {
-		"scope": "php",
-		"prefix": "hyva.icons.heroiconsRequire",
-		"body": [
-			"use Hyva\\Theme\\ViewModel\\HeroiconsOutline;",
-			"\n/** @var \\Hyva\\Theme\\ViewModel\\HeroiconsOutline $$heroicons */",
-			"$$heroicons = $$viewModels->require(\\Hyva\\Theme\\ViewModel\\HeroiconsOutline::class);"
-		],
-		"description": "Require Heroicons view model"
-	},
-	"Hyvä Heroicons icon render": {
-		"scope": "html",
-		"prefix": "hyva.icons.heroiconsRender",
-		"body": [
-			"<?= $$heroicons->${1:arrowLeftHtml}('${2:w-8 h-8}', ${3:24}, ${4:24}) ?>"
-		],
-		"description": "Render Heroicons icon"
-	},
-	"Hyvä SvgIcons view models require": {
-		"scope": "php",
-		"prefix": "hyva.icons.svgIconsRequire",
-		"body": [
-			"use Hyva\\Theme\\Model\\ViewModelRegistry;",
-			"use Hyva\\Theme\\ViewModel\\SvgIcons;",
-			"\n/** @var ViewModelRegistry $$viewModels */",
-			"\n/** @var SvgIcons $$hyvaicons */",
-			"$$hyvaicons = $$viewModels->require(SvgIcons::class);"
-		],
-		"description": "Require Hyvä SvgIcons view model"
-	},
-	"Hyvä SvgIcons icon render": {
-		"scope": "html",
-		"prefix": "hyva.icons.svgIconsRender",
-		"body": [
-			"<?= $$hyvaicons->renderHtml('${1:icon-name}', '${2:w-8 h-8}', ${3:24}, ${4:24}); ?>"
-		],
-		"description": "Render Heroicons icon"
-	}
+            "\t\t\t});",
+            "\t\t})();",
+            "<\/script>"
+        ],
+        "description": "Load a vanilla JS library from vanilla JS"
+    },
+    "Hyvä Ajax form post with fetch": {
+        "scope": "html, javascript",
+        "prefix": "hyva.js.ajaxFormPostWithFetch",
+        "body": [
+            "fetch(",
+            "\turl + '?form_key=' + hyva.getFormKey(),",
+            "\t{",
+            "\t\tmethod: 'post',",
+            "\t\tbody: JSON.stringify(data),",
+            "\t\theaders: {contentType: 'application/json'}",
+            "\t}",
+            ");"
+        ],
+        "description": "Ajax POST fetch request with JSON data"
+    },
+    "Hyvä Ajax request with fetch": {
+        "scope": "html, javascript",
+        "prefix": "hyva.js.ajaxRequestWithFetch",
+        "body": [
+            "fetch(`${BASE_URL}path/to/ajax/call`, {",
+            "\tmethod: \"GET\",",
+            "\theaders: {",
+            "\t\t\"X-Requested-With\": \"XMLHttpRequest\",",
+            "\t},",
+            "})",
+            "\t.then(response => {",
+            "\t\tif (response.ok) {",
+            "\t\t\treturn response.json();",
+            "\t\t} else {",
+            "\t\tconsole.warn(\"GET request failed\", response);",
+            "\t\t}",
+            "\t})",
+            "\t.then(data => {",
+            "\t\tif (data) {",
+            "\t\t//do something",
+            "\t\t}",
+            "\t});"
+        ],
+        "description": "Use the fetch API to simulate an Ajax request with the XMLHttpRequest object"
+    },
+    "Hyvä getCookie": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.getCookie",
+        "body": [
+            "hyva.getCookie(${1:name});"
+        ],
+        "description": "Hyvä getCookie get a given cookie value"
+    },
+    "Hyvä setCookie": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.setCookie",
+        "body": [
+            "hyva.setCookie(${1:name}, ${2:value});"
+        ],
+        "description": "Hyvä setCookie skip setting the domain on the cookie"
+    },
+    "Hyvä getBrowserStorage": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.getBrowserStorage",
+        "body": [
+            "hyva.getBrowserStorage();"
+        ],
+        "description": "Hyvä getBrowserStorage returns either the native localStorage, if it is available, or tries to fall back to the sessionStorage object"
+    },
+    "Hyvä postForm": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.postForm",
+        "body": [
+            "hyva.postForm(",
+            "\taction: 'https://example.test/custom_quote/move/inQuote/',",
+            "\tdata: { id: '<?= $$escaper->escapeJs($$block->getQuoteId()) ?>' }",
+            ");"
+        ],
+        "description": "Hyvä postForm first creates a new <form> element, then adds hidden fields for a given data object, and finally submits the created form"
+    },
+    "Hyvä strf": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.strf",
+        "body": [
+            "hyva.srtf('%1 %0 %2', 'a', 'b', 'c'); // => \"b a c\""
+        ],
+        "description": "Hyvä strf replaces positional parameters like %0 with the additional argument in the matching position. The first additional argument replaces %0, the second %1, and so on"
+    },
+    "Hyvä replaceDomElement": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.replaceDomElement",
+        "body": [
+            "hyva.replaceDomElement(${1:targetSelector}, ${2:content});"
+        ],
+        "description": "Hyvä replaceDomElement replaces the DOM element specified by targetSelector with the HTML string content"
+    },
+    "Hyvä getFormKey": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.getFormKey",
+        "body": [
+            "hyva.getFormKey();"
+        ],
+        "description": "Hyvä getFormKey returns the current form key value"
+    },
+    "Hyvä formatPrice": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.formatPrice",
+        "body": [
+            "hyva.formatPrice(${1:value})"
+        ],
+        "description": "Hyvä formatPrice formats and returns the given value using the current currency"
+    },
+    "Hyvä JavaScript Base URL": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.baseURL",
+        "body": [
+            "`${BASE_URL}example/path/action`"
+        ],
+        "description": "Hyvä JavaScript Base URL builder"
+    },
+    "Hyvä JavaScript current store code": {
+        "scope": "html",
+        "prefix": "hyva.js.currentStoreCode",
+        "body": [
+            "`${CURRENT_STORE_CODE}/example/path/action`"
+        ],
+        "description": "Hyvä JavaScript store code builder"
+    },
+    "Hyvä JavaScript dispatchMessages": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.dispatchMessages",
+        "body": [
+            "window.dispatchMessages([",
+            "\t{",
+            "\t\ttype: \"${1|success,notice,warning,error|}\",",
+            "\t\ttext: \"<?= $$escaper->escapeHtmlAttr(__('${2:Message}')) ?>\"",
+            "\t}",
+            "], 2000);"
+        ],
+        "description": "Hyvä JavaScript store code builder"
+    },
+    "Hyvä PHP Base URL": {
+        "scope": "html",
+        "prefix": "hyva.php.baseURL",
+        "body": [
+            "'<?= $$escaper->escapeUrl($block->getBaseUrl()) ?>example/path/action'"
+        ],
+        "description": "Hyvä PHP Base URL builder"
+    },
+    "Hyvä Heroicons view models require": {
+        "scope": "php",
+        "prefix": "hyva.icons.heroiconsRequire",
+        "body": [
+            "use Hyva\\Theme\\ViewModel\\HeroiconsOutline;",
+            "\n/** @var \\Hyva\\Theme\\ViewModel\\HeroiconsOutline $$heroicons */",
+            "$$heroicons = $$viewModels->require(\\Hyva\\Theme\\ViewModel\\HeroiconsOutline::class);"
+        ],
+        "description": "Require Heroicons view model"
+    },
+    "Hyvä Heroicons icon render": {
+        "scope": "html",
+        "prefix": "hyva.icons.heroiconsRender",
+        "body": [
+            "<?= $$heroicons->${1:arrowLeftHtml}('${2:w-8 h-8}', ${3:24}, ${4:24}) ?>"
+        ],
+        "description": "Render Heroicons icon"
+    },
+    "Hyvä SvgIcons view models require": {
+        "scope": "php",
+        "prefix": "hyva.icons.svgIconsRequire",
+        "body": [
+            "use Hyva\\Theme\\Model\\ViewModelRegistry;",
+            "use Hyva\\Theme\\ViewModel\\SvgIcons;",
+            "\n/** @var ViewModelRegistry $$viewModels */",
+            "\n/** @var SvgIcons $$hyvaicons */",
+            "$$hyvaicons = $$viewModels->require(SvgIcons::class);"
+        ],
+        "description": "Require Hyvä SvgIcons view model"
+    },
+    "Hyvä SvgIcons icon render": {
+        "scope": "html",
+        "prefix": "hyva.icons.svgIconsRender",
+        "body": [
+            "<?= $$hyvaicons->renderHtml('${1:icon-name}', '${2:w-8 h-8}', ${3:24}, ${4:24}); ?>"
+        ],
+        "description": "Render Heroicons icon"
+    }
 }
