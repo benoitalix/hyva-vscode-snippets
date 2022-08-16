@@ -8,12 +8,19 @@ Launch the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and type Ex
 
 ## Snippets
 
-| Trigger  | Content                                                                                            |
+### Alpine.js
+
+| Snippet  | Render                                                                                             |
 | :------- | :------------------------------------------------------------------------------------------------- |
 | `hyva.alpine.consoleLogObject` | Console log Object in Alpine.js                                              |
 | `hyva.alpine.listenPrivateContentLoaded` | Listen to all customer section data loading                        |
 | `hyva.alpine.listenProductFinalPrice` | Listen to product final price event                                   |
 | `hyva.alpine.newComponent` | Add Alpine.js new component                                                      |
+
+### JavaScript
+
+| Snippet  | Render                                                                                             |
+| :------- | :------------------------------------------------------------------------------------------------- |
 | `hyva.js.ajaxFormPostWithFetch` | Ajax POST fetch request with JSON data                                      |
 | `hyva.js.ajaxRequestWithFetch` | Use the fetch API to simulate an Ajax request with the XMLHttpRequest object |
 | `hyva.js.baseURL` | Hyvä JavaScript Base URL builder                                                          |
@@ -32,10 +39,20 @@ Launch the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and type Ex
 | `hyva.js.replaceDomElement` | Hyvä replaceDomElement replaces the DOM element specified by targetSelector with the HTML string content |
 | `hyva.js.setCookie` | Hyvä setCookie skip setting the domain on the cookie                                    |
 | `hyva.js.strf` | Hyvä strf replaces positional parameters like %0 with the additional argument in the matching position. The first additional argument replaces %0, the second %1, and so on |
+
+### Icons
+
+| Snippet  | Render                                                                                             |
+| :------- | :------------------------------------------------------------------------------------------------- |
 | `hyva.icons.heroiconsRender` | Render Heroicons icon                                                          |
 | `hyva.icons.heroiconsRequire` | Require Heroicons view model                                                  |
 | `hyva.icons.svgIconsRender` | Render Heroicons icon                                                           |
 | `hyva.icons.svgIconsRequire` | Require Hyvä SvgIcons view model                                               |
+
+### PHP
+
+| Snippet  | Render                                                                                             |
+| :------- | :------------------------------------------------------------------------------------------------- |
 | `hyva.php.baseURL` | Hyvä PHP Base URL builder                                                                |
 
 ## Licence
