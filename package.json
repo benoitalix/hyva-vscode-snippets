@@ -2,7 +2,7 @@
   "name": "hyva-vscode-snippets",
   "displayName": "Hyvä VSCode snippets",
   "description": "A collection of Hyvä code snippets for Visual Studio Code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "Benoit Alix",
   "license": "MIT",
   "engines": {
