@@ -1,14 +1,14 @@
 {
   "name": "hyva-vscode-snippets",
-  "displayName": "Hyvä VSCode snippets",
+  "displayName": "Hyvä Code Snippets",
   "description": "A collection of Hyvä code snippets for Visual Studio Code",
-  "version": "0.1.0",
-  "publisher": "Benoit Alix",
+  "version": "0.1.1",
+  "publisher": "BenoitAlix",
   "license": "MIT",
   "engines": {
     "vscode": "^1.70.0"
   },
-  "homepage": "https://github.com/balix/hyva-vscode-snippets.git",
+  "homepage": "https://github.com/balix/hyva-vscode-snippets",
   "repository": {
     "type": "git",
     "url": "https://github.com/balix/hyva-vscode-snippets.git"

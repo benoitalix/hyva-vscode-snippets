@@ -1,10 +1,10 @@
-# Hyvä VSCode snippets
+# Hyvä Themes VSCode Snippets
 
-A collection of Hyvä code snippets for Visual Studio Code.
+A collection of [Hyvä themes](https://hyva.io/) code snippets for Visual Studio Code.
 
 ## Installation
 
-Launch the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and type Extension. Then search for : **Hyvä VSCode snippets**.
+Launch the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and type Extension. Then search for : **Hyvä Code Snippets**.
 
 ## Snippets
 
