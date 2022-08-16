@@ -37,3 +37,7 @@ Launch the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and type Ex
 | `hyva.icons.svgIconsRender` | Render Heroicons icon                                                           |
 | `hyva.icons.svgIconsRequire` | Require Hyvä SvgIcons view model                                               |
 | `hyva.php.baseURL` | Hyvä PHP Base URL builder                                                                |
+
+## Licence
+
+MIT License, refer to license file.
