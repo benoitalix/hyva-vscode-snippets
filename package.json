@@ -1,6 +1,6 @@
 {
   "name": "hyva-vscode-snippets",
-  "displayName": "Hyvä VSCode snippets",
+  "displayName": "Hyvä Code Snippets",
   "description": "A collection of Hyvä code snippets for Visual Studio Code",
   "version": "0.1.1",
   "publisher": "BenoitAlix",
