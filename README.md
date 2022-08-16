@@ -1,6 +1,6 @@
 # Hyvä Themes VSCode Snippets
 
-A collection of [Hyvä themes](https://hyva.io/) code snippets for Visual Studio Code.
+A collection of [Hyvä themes](https://hyva.io/) code snippets for Visual Studio Code. Most part of the snippets are inspired by the [Hyvä Documentation](https://docs.hyva.io/).
 
 ## Installation
 
