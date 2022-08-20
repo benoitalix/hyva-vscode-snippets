@@ -1,15 +1,15 @@
 {
-    "Hyvä Alpine.js Object console.log": {
+    "Console log object in Alpine.js": {
         "scope": "html,javascript",
         "prefix": "hyva.alpine.consoleLogObject",
         "body": [
             "console.log(JSON.parse(JSON.stringify(${1:object})));"
         ],
-        "description": "Console log Object in Alpine.js"
+        "description": "Console log object in Alpine.js"
     },
-    "Hyvä Alpine.js new component": {
+    "Create new Alpine.js component": {
         "scope": "html",
-        "prefix": "hyva.alpine.newComponent",
+        "prefix": "hyva.alpine.createComponent",
         "body": [
             "<script>",
             "\t'use strict';",
@@ -23,55 +23,79 @@
             "\t<span x-text=\"message\"><\/span>",
             "<\/div>"
         ],
-        "description": "Add Alpine.js new component"
+        "description": "Create new Alpine.js component"
     },
-    "Hyvä Alpine.js listen to private content loaded event": {
+	"Dispatch Hyvä toggle authentication event": {
+        "scope": "html,javascript",
+        "prefix": "hyva.alpine.dispatchAuthentication",
+        "body": [
+			"$$dispatch('toggle-authentication');"
+        ],
+        "description": "Dispatch Hyvä toggle authentication event"
+    },
+	"Dispatch custom event with Alpine.js": {
+        "scope": "html,javascript",
+        "prefix": "hyva.alpine.dispatchCustomEvent",
+        "body": [
+            "$$dispatch('${1:custom-event-name}', { ${2:propertyName}: ${3:value} });"
+        ],
+        "description": "Dispatch custom event with Alpine.js"
+    },
+	"Dispatch Hyvä reload customer section data event": {
+        "scope": "html,javascript",
+        "prefix": "hyva.alpine.dispatchReloadCustomerSectionData",
+        "body": [
+			"$$dispatch('reload-customer-section-data');"
+        ],
+        "description": "Dispatch Hyvä reload customer section data event"
+    },
+	"Dispatch Hyvä toggle cart event": {
+        "scope": "html,javascript",
+        "prefix": "hyva.alpine.dispatchToggleCart",
+        "body": [
+            "$$dispatch('toggle-cart');"
+        ],
+        "description": "Dispatch Hyvä toggle cart event"
+    },
+	"Dispatch Hyvä toggle mobile menu event": {
+        "scope": "html,javascript",
+        "prefix": "hyva.alpine.dispatchToggleMobileMenu",
+        "body": [
+			"$$dispatch('toggle-mobile-menu');"
+        ],
+        "description": "Dispatch Hyvä toggle mobile menu event"
+    },
+	"Listen to custom event with Alpine.js": {
         "scope": "html",
-        "prefix": "hyva.alpine.listenPrivateContentLoaded",
+        "prefix": "hyva.alpine.listenToCustomEvent",
+        "body": [
+            "@custom-event-name.window=\"console.log(event.detail.props);\""
+        ],
+        "description": "Listen to custom event with Alpine.js"
+    },
+    "Listen to private content loaded event with Alpine.js": {
+        "scope": "html",
+        "prefix": "hyva.alpine.listenToPrivateContentLoaded",
         "body": [
             "@private-content-loaded.window=\"console.log(event.detail.data);\""
         ],
-        "description": "Listen to all customer section data loading"
+        "description": "Listen to private content loaded event with Alpine.js"
     },
-    "Hyvä Alpine.js listen to update product final price event": {
+    "Listen to update product final price event with Alpine.js": {
         "scope": "html",
-        "prefix": "hyva.alpine.listenProductFinalPrice",
+        "prefix": "hyva.alpine.listenToProductFinalPrice",
         "body": [
             "@update-product-final-price.window=\"console.log(event.detail);\""
         ],
-        "description": "Listen to product final price event"
+        "description": "Listen to update product final price event with Alpine.js"
     },
-    "Hyvä JavaScript dispatch reload customer section data event": {
-        "scope": "html, javascript",
-        "prefix": "hyva.js.dispatchReloadCustomerSectionData",
+    "Dispatch custom event with JavaScript": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.dispatchCustomEvent",
         "body": [
-            "window.dispatchEvent(new CustomEvent(\"reload-customer-section-data\"));"
+            "window.dispatchEvent(new CustomEvent(\"custom-event-name\"));"
         ],
-        "description": "Dispatch reload customer section data event"
-    },
-    "Hyvä JavaScript dispatch toggle mobile menu event": {
-        "scope": "html, javascript",
-        "prefix": "hyva.js.dispatchToggleMobileMenu",
-        "body": [
-            "window.dispatchEvent(new CustomEvent(\"toggle-mobile-menu\"));"
-        ],
-        "description": "Dispatch toggle mobile menu event"
-    },
-    "Hyvä JavaScript dispatch toggle authentication event": {
-        "scope": "html, javascript",
-        "prefix": "hyva.js.dispatchAuthentication",
-        "body": [
-            "window.dispatchEvent(new CustomEvent(\"toggle-authentication\"));"
-        ],
-        "description": "Dispatch toggle authentication event"
-    },
-    "Hyvä JavaScript dispatch toggle cart event": {
-        "scope": "html, javascript",
-        "prefix": "hyva.js.dispatchToggleCart",
-        "body": [
-            "window.dispatchEvent(new CustomEvent(\"toggle-cart\"));"
-        ],
-        "description": "Dispatch toggle cart event"
+        "description": "Dispatch custom event with JavaScript"
     },
     "Hyvä load external JavaScript": {
         "scope": "html",

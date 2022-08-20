@@ -12,10 +12,17 @@ Launch the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and type Ex
 
 | Snippet  | Render                                                                                             |
 | :------- | :------------------------------------------------------------------------------------------------- |
-| `hyva.alpine.consoleLogObject` | Console log Object in Alpine.js                                              |
-| `hyva.alpine.listenPrivateContentLoaded` | Listen to all customer section data loading                        |
-| `hyva.alpine.listenProductFinalPrice` | Listen to product final price event                                   |
-| `hyva.alpine.newComponent` | Add Alpine.js new component                                                      |
+| `hyva.alpine.consoleLogObject` | Console log object in Alpine.js                                              |
+| `hyva.alpine.createComponent` | Create new Alpine.js component                                                |
+| `hyva.alpine.dispatchAuthentication` | Dispatch Hyvä toggle authentication event                              |
+| `hyva.alpine.dispatchCustomEvent` | Dispatch custom event with Alpine.js                                      |
+| `hyva.alpine.dispatchReloadCustomerSectionData` | Dispatch Hyvä reload customer section data event            |
+| `hyva.alpine.dispatchToggleCart` | Dispatch Hyvä toggle cart event                                            |
+| `hyva.alpine.dispatchToggleMobileMenu` | Dispatch Hyvä toggle mobile menu event                               |
+| `hyva.alpine.listenToCustomEvent` | Listen to custom event with Alpine.js                                     |
+| `hyva.alpine.listenToPrivateContentLoaded` | Listen to private content loaded event with Alpine.js            |
+| `hyva.alpine.listenToProductFinalPrice` | Listen to update product final price event with Alpine.js           |
+
 
 ### JavaScript
 
@@ -25,11 +32,7 @@ Launch the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and type Ex
 | `hyva.js.ajaxRequestWithFetch` | Use the fetch API to simulate an Ajax request with the XMLHttpRequest object |
 | `hyva.js.baseURL` | Hyvä JavaScript Base URL builder                                                          |
 | `hyva.js.currentStoreCode` | Hyvä JavaScript store code builder                                               |
-| `hyva.js.dispatchAuthentication` | Dispatch toggle authentication event                                       |
 | `hyva.js.dispatchMessages` | Hyvä JavaScript store code builder                                               |
-| `hyva.js.dispatchReloadCustomerSectionData` | Dispatch reload customer section data event                     |
-| `hyva.js.dispatchToggleCart` | Dispatch toggle cart event                                                     |
-| `hyva.js.dispatchToggleMobileMenu` | Dispatch toggle mobile menu event                                        |
 | `hyva.js.formatPrice` | Hyvä formatPrice formats and returns the given value using the current currency       |
 | `hyva.js.getBrowserStorage` | Hyvä getBrowserStorage returns either the native localStorage, if it is available, or tries to fall back to the sessionStorage object |
 | `hyva.js.getCookie` | Hyvä getCookie get a given cookie value                                                 |
