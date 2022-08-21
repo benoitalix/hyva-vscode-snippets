@@ -29,11 +29,11 @@
         "scope": "html,javascript",
         "prefix": "hyva.alpine.dispatchAuthentication",
         "body": [
-			"$$dispatch('toggle-authentication');"
+            "$$dispatch('toggle-authentication');"
         ],
         "description": "Dispatch Hyvä toggle authentication event"
     },
-	"Dispatch custom event with Alpine.js": {
+    "Dispatch custom event with Alpine.js": {
         "scope": "html,javascript",
         "prefix": "hyva.alpine.dispatchCustomEvent",
         "body": [
@@ -41,15 +41,15 @@
         ],
         "description": "Dispatch custom event with Alpine.js"
     },
-	"Dispatch Hyvä reload customer section data event": {
+    "Dispatch Hyvä reload customer section data event": {
         "scope": "html,javascript",
         "prefix": "hyva.alpine.dispatchReloadCustomerSectionData",
         "body": [
-			"$$dispatch('reload-customer-section-data');"
+            "$$dispatch('reload-customer-section-data');"
         ],
         "description": "Dispatch Hyvä reload customer section data event"
     },
-	"Dispatch Hyvä toggle cart event": {
+    "Dispatch Hyvä toggle cart event": {
         "scope": "html,javascript",
         "prefix": "hyva.alpine.dispatchToggleCart",
         "body": [
@@ -57,15 +57,15 @@
         ],
         "description": "Dispatch Hyvä toggle cart event"
     },
-	"Dispatch Hyvä toggle mobile menu event": {
+    "Dispatch Hyvä toggle mobile menu event": {
         "scope": "html,javascript",
         "prefix": "hyva.alpine.dispatchToggleMobileMenu",
         "body": [
-			"$$dispatch('toggle-mobile-menu');"
+            "$$dispatch('toggle-mobile-menu');"
         ],
         "description": "Dispatch Hyvä toggle mobile menu event"
     },
-	"Listen to custom event with Alpine.js": {
+    "Listen to custom event with Alpine.js": {
         "scope": "html",
         "prefix": "hyva.alpine.listenToCustomEvent",
         "body": [
