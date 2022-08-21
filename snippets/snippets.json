@@ -411,7 +411,7 @@
         "prefix": "hyva.template.requireHericonsOutlineViewModel",
         "body": [
             "use Hyva\\Theme\\ViewModel\\HeroiconsOutline;",
-            "\n/** @var $$heroicons */",
+            "\n/** @var HeroiconsOutline $$heroicons */",
             "$$heroicons = $$viewModels->require(HeroiconsOutline::class);"
         ],
         "description": "Require Heroicons outline ViewModel"
@@ -421,7 +421,7 @@
         "prefix": "hyva.template.requireHericonsSolidViewModel",
         "body": [
             "use Hyva\\Theme\\ViewModel\\HeroiconsSolid;",
-            "\n/** @var $$heroicons */",
+            "\n/** @var HeroiconsSolid $$heroicons */",
             "$$heroicons = $$viewModels->require(HeroiconsSolid::class);"
         ],
         "description": "Require Heroicons solid ViewModel"
