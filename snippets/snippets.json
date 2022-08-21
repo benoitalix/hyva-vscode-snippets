@@ -393,7 +393,7 @@
         "scope": "html, javascript",
         "prefix": "hyva.template.isProductInStock",
         "body": [
-            "// TODO"
+            "$$stockItemViewModel->isInStock()"
         ],
         "description": "Use Magento 2 isProductInStock() method to check if product is in stock"
     },
@@ -450,7 +450,9 @@
         "scope": "php",
         "prefix": "hyva.template.requireProductStockItemViewModel",
         "body": [
-            "// TODO"
+            "use Hyva\\Theme\\ViewModel\\ProductStockItem;",
+            "\n/** @var ProductStockItem $$stockItemViewModel */",
+            "$$stockItemViewModel = $$viewModels->require(ProductStockItem::class);"
         ],
         "description": "Require product stock item ViewModel"
     },
