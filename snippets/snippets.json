@@ -382,10 +382,10 @@
         "description": "Use Magento 2 formatPrice() method to formats and returns the given value using the current currency"
     },
     "Is customer logged in": {
-        "scope": "html, javascript",
+        "scope": "php",
         "prefix": "hyva.template.isCustomerLoggedIn",
         "body": [
-            "// TODO"
+            "$$block->customerLoggedIn()"
         ],
         "description": "Use Magento 2 isCustomerLoggedIn() method to check if customer is logged in"
     },
@@ -401,7 +401,8 @@
         "scope": "php",
         "prefix": "hyva.template.requireCustomerViewModel",
         "body": [
-            "// TODO"
+            "use Magento\\Customer\\Block\\Account\\Customer;",
+            "\n/** @var Customer $block */"
         ],
         "description": "Require customer ViewModel"
     },
