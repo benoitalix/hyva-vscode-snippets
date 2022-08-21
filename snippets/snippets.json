@@ -247,39 +247,193 @@
         "scope": "html,javascript",
         "prefix": "hyva.js.strf",
         "body": [
-            "hyva.srtf('${0}%1 %0 %2', 'a', 'b', 'c'); // => \"b a c\""
+            "hyva.srtf('${1}%1 %0 %2', 'a', 'b', 'c'); // => \"b a c\""
         ],
         "description": "Replaces positional parameters like %0 with the additional argument in the matching position"
     },
-    "Hyvä PHP Base URL": {
+    "Create modal": {
         "scope": "html",
-        "prefix": "hyva.php.baseURL",
+        "prefix": "hyva.template.createModal",
         "body": [
-            "'<?= $$escaper->escapeUrl($block->getBaseUrl()) ?>example/path/action'"
+            "// TODO"
         ],
-        "description": "Hyvä PHP Base URL builder"
+        "description": "Create new modal with Hyvä Modal ViewModel"
     },
-    "Hyvä Heroicons view models require": {
+    "Echo Heroicons icon": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.echoHeroiconsIcon",
+        "body": [
+            "<?= $$heroicons->${1:arrowLeftHtml}('${2:w-8 h-8}', ${3:24}, ${4:24}) ?>"
+        ],
+        "description": "Echo Heroicons icon with Heroicons ViewModel"
+    },
+    "Echo loader": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.echoLoader",
+        "body": [
+            "<?= $block->getChildHtml('loading') ?>"
+        ],
+        "description": "Echo Hyvä UI loader"
+    },
+    "Echo SvgIcons icon": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.echoSvgIconsIcon",
+        "body": [
+            "<?= $$hyvaicons->renderHtml('${1:icon-name}', '${2:w-8 h-8}', ${3:24}, ${4:24}); ?>"
+        ],
+        "description": "Render SVG icon with SvgIcons ViewModel"
+    },
+    "Echo translation": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.echoTranslation",
+        "body": [
+            "<?= $escaper->escapeHtml(__('${1:string}')); ?>"
+        ],
+        "description": "Echo escaped Magento 2 translation"
+    },
+    "Echo translation with variable": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.echoTranslationWithVariable",
+        "body": [
+            "<?= $escaper->escapeHtml(__('${1:string} : %1', $${2:var})); ?>"
+        ],
+        "description": "Echo escaped Magento 2 translation with variable"
+    },
+    "Escape HTML": {
+        "scope": "php, javascript",
+        "prefix": "hyva.template.escapeHtml",
+        "body": [
+            "$$escaper->escapeHtml(${1:data});"
+        ],
+        "description": "Add Magento 2 HTML escaper"
+    },
+    "Escape HTML attribute": {
+        "scope": "php, javascript",
+        "prefix": "hyva.template.escapeHtmlAttr",
+        "body": [
+            "$$escaper->escapeHtmlAttr(${1:string});"
+        ],
+        "description": "Add Magento 2 HTML attribute escaper"
+    },
+    "Escape JavaScript": {
+        "scope": "php, javascript",
+        "prefix": "hyva.template.escapeJs",
+        "body": [
+            "$$escaper->escapeJs(${1:string});"
+        ],
+        "description": "Add Magento 2 JavaScript escaper"
+    },
+    "Escape URL": {
+        "scope": "php, javascript",
+        "prefix": "hyva.template.escapeUrl",
+        "body": [
+            "$$escaper->escapeUrl($${string});"
+        ],
+        "description": "Add Magento 2 URL escaper"
+    },
+    "Get child HTML": {
+        "scope": "html",
+        "prefix": "hyva.template.getChildHtml",
+        "body": [
+            "<?= $$block->getChildHtml('${1:block_name}'); ?>"
+        ],
+        "description": "Add Magento 2 getChildHtml() to render child block"
+    },
+    "Get file URL": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.getFileUrl",
+        "body": [
+            "<?= $this->getViewFileUrl('${1:Vendor_Module}::/${2:path}/${3:name-of-the-file.xx}') ?>"
+        ],
+        "description": "Use Magento 2 getFileUrl() method to render a file"
+    },
+    "Get URL": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.getUrl",
+        "body": [
+            "<?= $this->getUrl('${1:name-of-the-page}') ?>"
+        ],
+        "description": "Use Magento 2 getUrl() method to render the page path"
+    },
+    "Format price": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.formatPrice",
+        "body": [
+            "// TODO"
+        ],
+        "description": "Use Magento 2 formatPrice() method to formats and returns the given value using the current currency"
+    },
+    "Is customer logged in": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.isCustomerLoggedIn",
+        "body": [
+            "// TODO"
+        ],
+        "description": "Use Magento 2 isCustomerLoggedIn() method to check if customer is logged in"
+    },
+    "Is product in stock": {
+        "scope": "html, javascript",
+        "prefix": "hyva.template.isProductInStock",
+        "body": [
+            "// TODO"
+        ],
+        "description": "Use Magento 2 isProductInStock() method to check if product is in stock"
+    },
+    "Require customer ViewModel": {
         "scope": "php",
-        "prefix": "hyva.icons.heroiconsRequire",
+        "prefix": "hyva.template.requireCustomerViewModel",
+        "body": [
+            "// TODO"
+        ],
+        "description": "Require customer ViewModel"
+    },
+    "Require Heroicons outline ViewModel": {
+        "scope": "php",
+        "prefix": "hyva.template.requireHericonsOutlineViewModel",
         "body": [
             "use Hyva\\Theme\\ViewModel\\HeroiconsOutline;",
             "\n/** @var \\Hyva\\Theme\\ViewModel\\HeroiconsOutline $$heroicons */",
             "$$heroicons = $$viewModels->require(\\Hyva\\Theme\\ViewModel\\HeroiconsOutline::class);"
         ],
-        "description": "Require Heroicons view model"
+        "description": "Require Heroicons outline ViewModel"
     },
-    "Hyvä Heroicons icon render": {
-        "scope": "html",
-        "prefix": "hyva.icons.heroiconsRender",
-        "body": [
-            "<?= $$heroicons->${1:arrowLeftHtml}('${2:w-8 h-8}', ${3:24}, ${4:24}) ?>"
-        ],
-        "description": "Render Heroicons icon"
-    },
-    "Hyvä SvgIcons view models require": {
+    "Require Heroicons solid ViewModel": {
         "scope": "php",
-        "prefix": "hyva.icons.svgIconsRequire",
+        "prefix": "hyva.template.requireHericonsSolidViewModel",
+        "body": [
+            "use Hyva\\Theme\\ViewModel\\HeroiconsSolid;",
+            "\n/** @var \\Hyva\\Theme\\ViewModel\\HeroiconsSolid $$heroicons */",
+            "$$heroicons = $$viewModels->require(\\Hyva\\Theme\\ViewModel\\HeroiconsSolid::class);"
+        ],
+        "description": "Require Heroicons solid ViewModel"
+    },
+    "Require Hyvä Modal ViewModel": {
+        "scope": "php",
+        "prefix": "hyva.template.requireHericonsSolidViewModel",
+        "body": [
+            "// TODO"
+        ],
+        "description": "Require Hyvä Modal ViewModel"
+    },
+    "Require product price ViewModel": {
+        "scope": "php",
+        "prefix": "hyva.template.requireProductPriceViewModel",
+        "body": [
+            "// TODO"
+        ],
+        "description": "Require product price ViewModel"
+    },
+    "Require product stock item ViewModel": {
+        "scope": "php",
+        "prefix": "hyva.template.requireProductStockItemViewModel",
+        "body": [
+            "// TODO"
+        ],
+        "description": "Require product stock item ViewModel"
+    },
+    "Require SvgIcons ViewModel": {
+        "scope": "php",
+        "prefix": "hyva.icons.requireSvgIconsViewModel",
         "body": [
             "use Hyva\\Theme\\Model\\ViewModelRegistry;",
             "use Hyva\\Theme\\ViewModel\\SvgIcons;",
@@ -287,14 +441,6 @@
             "\n/** @var SvgIcons $$hyvaicons */",
             "$$hyvaicons = $$viewModels->require(SvgIcons::class);"
         ],
-        "description": "Require Hyvä SvgIcons view model"
-    },
-    "Hyvä SvgIcons icon render": {
-        "scope": "html",
-        "prefix": "hyva.icons.svgIconsRender",
-        "body": [
-            "<?= $$hyvaicons->renderHtml('${1:icon-name}', '${2:w-8 h-8}', ${3:24}, ${4:24}); ?>"
-        ],
-        "description": "Render Heroicons icon"
+        "description": "Require SvgIcons ViewModel"
     }
 }
