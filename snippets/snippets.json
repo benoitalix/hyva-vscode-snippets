@@ -430,7 +430,9 @@
         "scope": "php",
         "prefix": "hyva.template.requireModalViewModel",
         "body": [
-            "// TODO"
+            "use Hyva\\Theme\\ViewModel\\Modal;",
+            "\n/** @var Modal $$modalViewModel */",
+            "$$modalViewModel = $$viewModels->require(Modal::class);"
         ],
         "description": "Require Hyvä Modal ViewModel"
     },
