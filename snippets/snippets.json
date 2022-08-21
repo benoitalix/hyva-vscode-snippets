@@ -255,7 +255,25 @@
         "scope": "html",
         "prefix": "hyva.template.createModal",
         "body": [
-            "// TODO"
+            "<?= $$modalViewModel->createModal()->withContent(<<<END_OF_CONTENT",
+            "\t<div id=\"${1:the label}\">",
+            "\t\t{$$escaper->escapeHtml(__('${2:Inline Content Example}'))}",
+            "\t</div>",
+            "\t<div class=\"mt-20 flex justify-between gap-2\">",
+            "\t\t<button @click=\"hide\" type=\"button\" class=\"btn\">",
+            "\t\t\t{$$escaper->escapeHtml(__('Cancel'))}",
+            "\t\t</button>",
+            "\t\t<button x-focus-first @click=\"${3:doSomething}\" type=\"button\" class=\"btn btn-primary\">",
+            "\t\t\t{$$escaper->escapeHtml(__('Yes'))}",
+            "\t\t</button>",
+            "\t</div>",
+            "END_OF_CONTENT)",
+            "-> positionCenter()",
+            "->withOverlayClasses(${4:'fixed', 'inset-0', 'bg-black', 'bg-opacity-50', 'z-10'})",
+            "->withContainerClasses(${5:'fixed', 'flex', 'justify-center', 'items-center', 'text-left'})",
+            "->withDialogClasses(${6:'inline-block', 'bg-white', 'shadow-xl', 'rounded-lg', 'p-10'})",
+            "->withAriaLabelledby('${7:the label}') ",
+            "?>"
         ],
         "description": "Create new modal with Hyvä Modal ViewModel"
     },
