@@ -25,7 +25,7 @@
         ],
         "description": "Create new Alpine.js component"
     },
-	"Dispatch Hyvä toggle authentication event": {
+    "Dispatch Hyvä toggle authentication event": {
         "scope": "html,javascript",
         "prefix": "hyva.alpine.dispatchAuthentication",
         "body": [
@@ -89,17 +89,118 @@
         ],
         "description": "Listen to update product final price event with Alpine.js"
     },
-    "Dispatch custom event with JavaScript": {
+    "Dispatch custom event": {
         "scope": "html,javascript",
         "prefix": "hyva.js.dispatchCustomEvent",
         "body": [
-            "window.dispatchEvent(new CustomEvent(\"custom-event-name\"));"
+            "window.dispatchEvent(new CustomEvent('${1:custom-event-name}', { ${2:propertyName}: ${3:value} }));"
         ],
-        "description": "Dispatch custom event with JavaScript"
+        "description": "Dispatch custom event"
     },
-    "Hyvä load external JavaScript": {
+    "Hyvä dispatch messages": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.dispatchMessages",
+        "body": [
+            "window.dispatchMessages([",
+            "\t{",
+            "\t\ttype: \"${1|success,notice,warning,error|}\",",
+            "\t\ttext: \"<?= $$escaper->escapeHtmlAttr(__('${2:Message}')) ?>\"",
+            "\t}",
+            "], 2000);"
+        ],
+        "description": "Display Hyvä notification banner (success, notice, warning or error)"
+    },
+    "Fetch Ajax request": {
+        "scope": "html, javascript",
+        "prefix": "hyva.js.fetchAjaxRequest",
+        "body": [
+            "fetch(`\\${BASE_URL\\}/${1:path/to/ajax/call}`, {",
+            "\tmethod: \"GET\",",
+            "\theaders: {",
+            "\t\t\"X-Requested-With\": \"XMLHttpRequest\",",
+            "\t},",
+            "})",
+            "\t.then(response => {",
+            "\t\tif (response.ok) {",
+            "\t\t\treturn response.json();",
+            "\t\t} else {",
+            "\t\t\tconsole.warn(\"GET request failed\", response);",
+            "\t\t}",
+            "\t})",
+            "\t.then(data => {",
+            "\t\tif (data) {",
+            "\t\t\t//do something",
+            "\t\t}",
+            "\t});"
+        ],
+        "description": "Use the fetch API to simulate an Ajax request with the XMLHttpRequest object"
+    },
+    "Fetch form post request": {
+        "scope": "html, javascript",
+        "prefix": "hyva.js.fetchFormPostRequest",
+        "body": [
+            "fetch(",
+            "\turl + '?form_key=' + hyva.getFormKey(),",
+            "\t{",
+            "\t\tmethod: 'post',",
+            "\t\tbody: JSON.stringify(data),",
+            "\t\theaders: {contentType: 'application/json'}",
+            "\t}",
+            ");"
+        ],
+        "description": "Fetch form post request with JSON data"
+    },
+    "Hyvä formatPrice": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.formatPrice",
+        "body": [
+            "hyva.formatPrice(${1:number});"
+        ],
+        "description": "Formats and returns the given value using the current currency"
+    },
+    "Hyvä Base URL builder": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.getBaseUrl",
+        "body": [
+            "`\\${BASE_URL\\}/${1:example/path/action}`"
+        ],
+        "description": "Build base URL"
+    },
+    "Hyvä getBrowserStorage": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.getBrowserStorage",
+        "body": [
+            "hyva.getBrowserStorage();"
+        ],
+        "description": "Returns either the native localStorage if it is available or tries to fall back to the sessionStorage object"
+    },
+    "Hyvä getCookie": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.getCookie",
+        "body": [
+            "hyva.getCookie(${1:name});"
+        ],
+        "description": "Get a given cookie value"
+    },
+    "Hyvä get current store code": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.getCurrentStoreCode",
+        "body": [
+            "`\\${CURRENT_STORE_CODE\\}/${1:example/path/action}`"
+        ],
+        "description": "Buld current store code"
+    },
+    "Hyvä getFormKey": {
+        "scope": "html,javascript",
+        "prefix": "hyva.js.getFormKey",
+        "body": [
+            "hyva.getFormKey();"
+        ],
+        "description": "Returns the current form key value"
+    },
+    "Load external library": {
         "scope": "html",
-        "prefix": "hyva.js.loadExternalLib",
+        "prefix": "hyva.js.loadExternalLibrary",
         "body": [
             "<script>",
             "\t'use strict';",
@@ -113,90 +214,18 @@
             "\t\t})();",
             "<\/script>"
         ],
-        "description": "Load a vanilla JS library from vanilla JS"
-    },
-    "Hyvä Ajax form post with fetch": {
-        "scope": "html, javascript",
-        "prefix": "hyva.js.ajaxFormPostWithFetch",
-        "body": [
-            "fetch(",
-            "\turl + '?form_key=' + hyva.getFormKey(),",
-            "\t{",
-            "\t\tmethod: 'post',",
-            "\t\tbody: JSON.stringify(data),",
-            "\t\theaders: {contentType: 'application/json'}",
-            "\t}",
-            ");"
-        ],
-        "description": "Ajax POST fetch request with JSON data"
-    },
-    "Hyvä Ajax request with fetch": {
-        "scope": "html, javascript",
-        "prefix": "hyva.js.ajaxRequestWithFetch",
-        "body": [
-            "fetch(`${BASE_URL}path/to/ajax/call`, {",
-            "\tmethod: \"GET\",",
-            "\theaders: {",
-            "\t\t\"X-Requested-With\": \"XMLHttpRequest\",",
-            "\t},",
-            "})",
-            "\t.then(response => {",
-            "\t\tif (response.ok) {",
-            "\t\t\treturn response.json();",
-            "\t\t} else {",
-            "\t\tconsole.warn(\"GET request failed\", response);",
-            "\t\t}",
-            "\t})",
-            "\t.then(data => {",
-            "\t\tif (data) {",
-            "\t\t//do something",
-            "\t\t}",
-            "\t});"
-        ],
-        "description": "Use the fetch API to simulate an Ajax request with the XMLHttpRequest object"
-    },
-    "Hyvä getCookie": {
-        "scope": "html,javascript",
-        "prefix": "hyva.js.getCookie",
-        "body": [
-            "hyva.getCookie(${1:name});"
-        ],
-        "description": "Hyvä getCookie get a given cookie value"
-    },
-    "Hyvä setCookie": {
-        "scope": "html,javascript",
-        "prefix": "hyva.js.setCookie",
-        "body": [
-            "hyva.setCookie(${1:name}, ${2:value});"
-        ],
-        "description": "Hyvä setCookie skip setting the domain on the cookie"
-    },
-    "Hyvä getBrowserStorage": {
-        "scope": "html,javascript",
-        "prefix": "hyva.js.getBrowserStorage",
-        "body": [
-            "hyva.getBrowserStorage();"
-        ],
-        "description": "Hyvä getBrowserStorage returns either the native localStorage, if it is available, or tries to fall back to the sessionStorage object"
+        "description": "Load vanilla JavaScript library from vanilla JavaScript"
     },
     "Hyvä postForm": {
         "scope": "html,javascript",
         "prefix": "hyva.js.postForm",
         "body": [
-            "hyva.postForm(",
-            "\taction: 'https://example.test/custom_quote/move/inQuote/',",
-            "\tdata: { id: '<?= $$escaper->escapeJs($$block->getQuoteId()) ?>' }",
-            ");"
+            "hyva.postForm({",
+            "\taction: 'https://${1:example.test/example/path/action/}',",
+            "\tdata: { id: '<?= $$escaper->escapeJs($$block->${2:methodName()}) ?>' }",
+            "});"
         ],
-        "description": "Hyvä postForm first creates a new <form> element, then adds hidden fields for a given data object, and finally submits the created form"
-    },
-    "Hyvä strf": {
-        "scope": "html,javascript",
-        "prefix": "hyva.js.strf",
-        "body": [
-            "hyva.srtf('%1 %0 %2', 'a', 'b', 'c'); // => \"b a c\""
-        ],
-        "description": "Hyvä strf replaces positional parameters like %0 with the additional argument in the matching position. The first additional argument replaces %0, the second %1, and so on"
+        "description": "Creates a new <form> element then adds hidden fields for a given data object and finally submits the created form"
     },
     "Hyvä replaceDomElement": {
         "scope": "html,javascript",
@@ -204,52 +233,23 @@
         "body": [
             "hyva.replaceDomElement(${1:targetSelector}, ${2:content});"
         ],
-        "description": "Hyvä replaceDomElement replaces the DOM element specified by targetSelector with the HTML string content"
+        "description": "Replaces the DOM element specified by targetSelector with the HTML string content"
     },
-    "Hyvä getFormKey": {
+    "Hyvä setCookie": {
         "scope": "html,javascript",
-        "prefix": "hyva.js.getFormKey",
+        "prefix": "hyva.js.setCookie",
         "body": [
-            "hyva.getFormKey();"
+            "hyva.setCookie(${1:name}, ${2:value});"
         ],
-        "description": "Hyvä getFormKey returns the current form key value"
-    },
-    "Hyvä formatPrice": {
+        "description": "Skip setting the domain on the cookie"
+    },    
+    "Hyvä strf": {
         "scope": "html,javascript",
-        "prefix": "hyva.js.formatPrice",
+        "prefix": "hyva.js.strf",
         "body": [
-            "hyva.formatPrice(${1:value})"
+            "hyva.srtf('${0}%1 %0 %2', 'a', 'b', 'c'); // => \"b a c\""
         ],
-        "description": "Hyvä formatPrice formats and returns the given value using the current currency"
-    },
-    "Hyvä JavaScript Base URL": {
-        "scope": "html,javascript",
-        "prefix": "hyva.js.baseURL",
-        "body": [
-            "`${BASE_URL}example/path/action`"
-        ],
-        "description": "Hyvä JavaScript Base URL builder"
-    },
-    "Hyvä JavaScript current store code": {
-        "scope": "html",
-        "prefix": "hyva.js.currentStoreCode",
-        "body": [
-            "`${CURRENT_STORE_CODE}/example/path/action`"
-        ],
-        "description": "Hyvä JavaScript store code builder"
-    },
-    "Hyvä JavaScript dispatchMessages": {
-        "scope": "html,javascript",
-        "prefix": "hyva.js.dispatchMessages",
-        "body": [
-            "window.dispatchMessages([",
-            "\t{",
-            "\t\ttype: \"${1|success,notice,warning,error|}\",",
-            "\t\ttext: \"<?= $$escaper->escapeHtmlAttr(__('${2:Message}')) ?>\"",
-            "\t}",
-            "], 2000);"
-        ],
-        "description": "Hyvä JavaScript store code builder"
+        "description": "Replaces positional parameters like %0 with the additional argument in the matching position"
     },
     "Hyvä PHP Base URL": {
         "scope": "html",

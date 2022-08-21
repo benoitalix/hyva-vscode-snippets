@@ -26,22 +26,23 @@ Launch the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and type Ex
 
 ### JavaScript
 
-| Snippet  | Render                                                                                             |
-| :------- | :------------------------------------------------------------------------------------------------- |
-| `hyva.js.ajaxFormPostWithFetch` | Ajax POST fetch request with JSON data                                      |
-| `hyva.js.ajaxRequestWithFetch` | Use the fetch API to simulate an Ajax request with the XMLHttpRequest object |
-| `hyva.js.baseURL` | Hyvä JavaScript Base URL builder                                                          |
-| `hyva.js.currentStoreCode` | Hyvä JavaScript store code builder                                               |
-| `hyva.js.dispatchMessages` | Hyvä JavaScript store code builder                                               |
-| `hyva.js.formatPrice` | Hyvä formatPrice formats and returns the given value using the current currency       |
-| `hyva.js.getBrowserStorage` | Hyvä getBrowserStorage returns either the native localStorage, if it is available, or tries to fall back to the sessionStorage object |
-| `hyva.js.getCookie` | Hyvä getCookie get a given cookie value                                                 |
-| `hyva.js.getFormKey` | Hyvä getFormKey returns the current form key value                                     |
-| `hyva.js.loadExternalLib` | Load a vanilla JS library from vanilla JS                                         |
-| `hyva.js.postForm` | Hyvä postForm first creates a new <form> element, then adds hidden fields for a given data object, and finally submits the created form |
-| `hyva.js.replaceDomElement` | Hyvä replaceDomElement replaces the DOM element specified by targetSelector with the HTML string content |
-| `hyva.js.setCookie` | Hyvä setCookie skip setting the domain on the cookie                                    |
-| `hyva.js.strf` | Hyvä strf replaces positional parameters like %0 with the additional argument in the matching position. The first additional argument replaces %0, the second %1, and so on |
+| Snippet  | Render                                                                                                                            |
+| :------- | :-------------------------------------------------------------------------------------------------------------------------------- |
+| `hyva.js.dispatchCustomEvent` | Dispatch custom event                                                                                        |
+| `hyva.js.dispatchMessages` | Display Hyvä notification banner (success, notice, warning or error)                                            |
+| `hyva.js.fetchAjaxRequest` | Use the fetch API to simulate an Ajax request with the XMLHttpRequest object                                    |
+| `hyva.js.fetchFormPostRequest` | Fetch form post request with JSON data                                                                      |
+| `hyva.js.formatPrice` | Formats and returns the given value using the current currency                                                       |
+| `hyva.js.getBaseUrl` | Base URL builder                                                                                                      |
+| `hyva.js.getBrowserStorage` | Returns either the native localStorage if it is available or tries to fall back to the sessionStorage object   |
+| `hyva.js.getCookie` | Get a given cookie value                                                                                               |
+| `hyva.js.getCurrentStoreCode` | Buld current store code                                                                                      |
+| `hyva.js.getFormKey` | Returns the current form key value                                                                                    |
+| `hyva.js.loadExternalLibrary` | Load vanilla JavaScript library from vanilla JavaScript                                                      |
+| `hyva.js.postForm` | Creates a new ```<form>``` element then adds hidden fields for a given data object and finally submits the created form |
+| `hyva.js.replaceDomElement` | Replaces the DOM element specified by targetSelector with the HTML string content                              |
+| `hyva.js.setCookie` | Skip setting the domain on the cookie                                                                                  |
+| `hyva.js.strf` | Replaces positional parameters like %0 with the additional argument in the matching position                                |
 
 ### Icons
 
