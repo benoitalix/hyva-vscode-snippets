@@ -452,11 +452,9 @@
     },
     "Require SvgIcons ViewModel": {
         "scope": "php",
-        "prefix": "hyva.icons.requireSvgIconsViewModel",
+        "prefix": "hyva.template.requireSvgIconsViewModel",
         "body": [
-            "use Hyva\\Theme\\Model\\ViewModelRegistry;",
             "use Hyva\\Theme\\ViewModel\\SvgIcons;",
-            "\n/** @var ViewModelRegistry $$viewModels */",
             "\n/** @var SvgIcons $$hyvaicons */",
             "$$hyvaicons = $$viewModels->require(SvgIcons::class);"
         ],
