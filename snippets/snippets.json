@@ -374,10 +374,10 @@
         "description": "Use Magento 2 getUrl() method to render the page path"
     },
     "Format price": {
-        "scope": "html, javascript",
+        "scope": "php",
         "prefix": "hyva.template.formatPrice",
         "body": [
-            "// TODO"
+            "$$productPriceViewModel->format(${1:$$value})"
         ],
         "description": "Use Magento 2 formatPrice() method to formats and returns the given value using the current currency"
     },
@@ -438,7 +438,9 @@
         "scope": "php",
         "prefix": "hyva.template.requireProductPriceViewModel",
         "body": [
-            "// TODO"
+            "use Hyva\\Theme\\ViewModel\\ProductPrice;",
+            "\n/** @var ProductPrice $$productPriceViewModel */",
+            "$$productPriceViewModel = $$viewModels->require(ProductPrice::class);"
         ],
         "description": "Require product price ViewModel"
     },
