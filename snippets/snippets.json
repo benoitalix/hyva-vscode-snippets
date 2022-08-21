@@ -411,8 +411,8 @@
         "prefix": "hyva.template.requireHericonsOutlineViewModel",
         "body": [
             "use Hyva\\Theme\\ViewModel\\HeroiconsOutline;",
-            "\n/** @var \\Hyva\\Theme\\ViewModel\\HeroiconsOutline $$heroicons */",
-            "$$heroicons = $$viewModels->require(\\Hyva\\Theme\\ViewModel\\HeroiconsOutline::class);"
+            "\n/** @var $$heroicons */",
+            "$$heroicons = $$viewModels->require(HeroiconsOutline::class);"
         ],
         "description": "Require Heroicons outline ViewModel"
     },
@@ -421,14 +421,14 @@
         "prefix": "hyva.template.requireHericonsSolidViewModel",
         "body": [
             "use Hyva\\Theme\\ViewModel\\HeroiconsSolid;",
-            "\n/** @var \\Hyva\\Theme\\ViewModel\\HeroiconsSolid $$heroicons */",
-            "$$heroicons = $$viewModels->require(\\Hyva\\Theme\\ViewModel\\HeroiconsSolid::class);"
+            "\n/** @var $$heroicons */",
+            "$$heroicons = $$viewModels->require(HeroiconsSolid::class);"
         ],
         "description": "Require Heroicons solid ViewModel"
     },
     "Require Hyvä Modal ViewModel": {
         "scope": "php",
-        "prefix": "hyva.template.requireHericonsSolidViewModel",
+        "prefix": "hyva.template.requireModalViewModel",
         "body": [
             "// TODO"
         ],
