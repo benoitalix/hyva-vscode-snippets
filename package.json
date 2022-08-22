@@ -2,7 +2,7 @@
   "name": "hyva-vscode-snippets",
   "displayName": "Hyvä Code Snippets",
   "description": "A collection of Hyvä code snippets for Visual Studio Code",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "publisher": "BenoitAlix",
   "icon": "images/hyva-logo.png",
   "license": "MIT",
@@ -25,20 +25,16 @@
   "contributes": {
     "snippets": [
       {
-        "language": "html",
-        "path": "./snippets/snippets.json"
+        "language": "html, javascript",
+        "path": "./snippets/alpine.json"
       },
       {
-        "language": "javascript",
-        "path": "./snippets/snippets.json"
+        "language": "html, javascript",
+        "path": "./snippets/javascript.json"
       },
       {
-        "language": "php",
-        "path": "./snippets/snippets.json"
-      },
-      {
-        "language": "xml",
-        "path": "./snippets/snippets.json"
+        "language": "php, html; javascript",
+        "path": "./snippets/template.json"
       }
     ]
   }
