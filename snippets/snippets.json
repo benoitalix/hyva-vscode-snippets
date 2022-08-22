@@ -207,7 +207,7 @@
             "\t\t(function () {",
             "\t\t\twindow.addEventListener('DOMContentLoaded', () => {",
             "\t\t\t\tconst script = document.createElement('script')",
-            "\t\t\t\tscript.src = '<?= $escaper->escapeUrl($block->getViewFileUrl('${1:Vendor_ModuleName}::js/my-library.js')) ?>';",
+            "\t\t\t\tscript.src = '<?= $$escaper->escapeUrl($$block->getViewFileUrl('${1:Vendor_ModuleName}::js/my-library.js')) ?>';",
             "\t\t\t\tscript.addEventListener('load', () => ${2:initSomething}());",
             "\t\t\t\tdocument.head.append(script);",
             "\t\t\t});",
@@ -289,7 +289,7 @@
         "scope": "html, javascript",
         "prefix": "hyva.template.echoLoader",
         "body": [
-            "<?= $block->getChildHtml('loading') ?>"
+            "<?= $$block->getChildHtml('loading') ?>"
         ],
         "description": "Echo Hyvä UI loader"
     },
@@ -305,7 +305,7 @@
         "scope": "html, javascript",
         "prefix": "hyva.template.echoTranslation",
         "body": [
-            "<?= $escaper->escapeHtml(__('${1:string}')); ?>"
+            "<?= $$escaper->escapeHtml(__('${1:string}')); ?>"
         ],
         "description": "Echo escaped Magento 2 translation"
     },
@@ -313,7 +313,7 @@
         "scope": "html, javascript",
         "prefix": "hyva.template.echoTranslationWithVariable",
         "body": [
-            "<?= $escaper->escapeHtml(__('${1:string} : %1', $${2:var})); ?>"
+            "<?= $$escaper->escapeHtml(__('${1:string} : %1', $${2:var})); ?>"
         ],
         "description": "Echo escaped Magento 2 translation with variable"
     },
@@ -402,7 +402,7 @@
         "prefix": "hyva.template.requireCustomerViewModel",
         "body": [
             "use Magento\\Customer\\Block\\Account\\Customer;",
-            "\n/** @var Customer $block */"
+            "\n/** @var Customer $$block */"
         ],
         "description": "Require customer ViewModel"
     },
