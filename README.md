@@ -1,3 +1,9 @@
+<p align="center">
+    <a href="https://hyva.io/" target="_blank">
+        <img src="./images/hyva-themes.svg" alt="Hyvä themes" width="192" height=86" />
+    </a>
+</p>
+
 # Hyvä Themes VSCode Snippets
 
 A collection of [Hyvä themes](https://hyva.io/) code snippets for Visual Studio Code. Most part of the snippets are inspired by the [Hyvä Documentation](https://docs.hyva.io/).
