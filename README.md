@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://hyva.io/" target="_blank">
-        <img src="./images/hyva-themes.svg" alt="Hyvä themes" width="192" height=86" />
+        <img src="./images/hyva-snippets-logo.png" alt="Hyvä snippets" width="225" height=100" />
     </a>
 </p>
 
