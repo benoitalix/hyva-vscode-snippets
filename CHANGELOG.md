@@ -2,6 +2,14 @@
 
 All notable changes to the "hyva-vscode-snippets" extension will be documented in this file.
 
+## [0.2.2]
+
+- Update Hyva presentation in readme
+- Update extension installation instructions in readme
+- Add main Hyva Theme logo to readme
+- Split main snippet file into multiple dedicated JSON files
+- Fix PHP variables missing prefixes
+
 ## [0.2.1]
 
 - Update alpine.js snippets order and content
