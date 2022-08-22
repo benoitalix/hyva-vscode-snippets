@@ -25,20 +25,16 @@
   "contributes": {
     "snippets": [
       {
-        "language": "html",
-        "path": "./snippets/snippets.json"
+        "language": "html, javascript",
+        "path": "./snippets/alpine.json"
       },
       {
-        "language": "javascript",
-        "path": "./snippets/snippets.json"
+        "language": "html, javascript",
+        "path": "./snippets/javascript.json"
       },
       {
-        "language": "php",
-        "path": "./snippets/snippets.json"
-      },
-      {
-        "language": "xml",
-        "path": "./snippets/snippets.json"
+        "language": "php, html; javascript",
+        "path": "./snippets/template.json"
       }
     ]
   }
