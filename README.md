@@ -10,7 +10,10 @@ A collection of [Hyvä themes](https://hyva.io/) code snippets for Visual Studio
 
 ## Installation
 
-Launch the Command Palette (`Ctrl + Shift + P` or `Cmd + Shift + P`) and type Extension. Then search for : **Hyvä Code Snippets**.
+- Open the extension panel (`Ctrl + Shift + X` or `Cmd + Shift + X`)
+- Search for **Hyvä Code Snippets**
+- Click on Install
+- Enjoy :)
 
 ## Snippets
 
