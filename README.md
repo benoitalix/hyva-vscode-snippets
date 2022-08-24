@@ -1,11 +1,11 @@
 # Hyvä Code Snippets
 
-A collection of [Hyvä](https://hyva.io/) code snippets for [Visual Studio Code](https://code.visualstudio.com/).
-
 [![Version](https://vsmarketplacebadge.apphb.com/version/BenoitAlix.hyva-vscode-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=BenoitAlix.hyva-vscode-snippets)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/BenoitAlix.hyva-vscode-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=BenoitAlix.hyva-vscode-snippets)
 [![Downloads](https://vsmarketplacebadge.apphb.com/downloads/BenoitAlix.hyva-vscode-snippets.svg)](https://vsmarketplacebadge.apphb.com/downloads-short/BenoitAlix.hyva-vscode-snippets.svg)
 [![Ratings](https://vsmarketplacebadge.apphb.com/rating/BenoitAlix.hyva-vscode-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=BenoitAlix.hyva-vscode-snippets)
+
+A collection of [Hyvä](https://hyva.io/) code snippets for [Visual Studio Code](https://code.visualstudio.com/).
 
 If you don't know yet, [Hyvä Themes](https://hyva.io/) is a brand-new frontend for Magento 2 with a best Developer Experience, performance and time to market. 
 
