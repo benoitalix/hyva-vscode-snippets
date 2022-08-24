@@ -4,7 +4,7 @@
   "description": "A collection of Hyvä code snippets for Visual Studio Code",
   "version": "0.2.2",
   "publisher": "BenoitAlix",
-  "icon": "images/hyva-logo.png",
+  "icon": "images/hyva.png",
   "license": "MIT",
   "engines": {
     "vscode": "^1.70.0"
