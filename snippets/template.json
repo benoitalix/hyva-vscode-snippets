@@ -109,7 +109,7 @@
         "scope": "html, javascript",
         "prefix": "hyva.template.getFileUrl",
         "body": [
-            "<?= $this->getViewFileUrl('${1:Vendor_Module}::/${2:path}/${3:name-of-the-file.xx}') ?>"
+            "<?= $$this->getViewFileUrl('${1:Vendor_Module}::/${2:path}/${3:name-of-the-file.xx}') ?>"
         ],
         "description": "Use Magento 2 getFileUrl() method to render a file"
     },
@@ -117,7 +117,7 @@
         "scope": "html, javascript",
         "prefix": "hyva.template.getUrl",
         "body": [
-            "<?= $this->getUrl('${1:name-of-the-page}') ?>"
+            "<?= $$this->getUrl('${1:name-of-the-page}') ?>"
         ],
         "description": "Use Magento 2 getUrl() method to render the page path"
     },
