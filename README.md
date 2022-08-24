@@ -1,23 +1,22 @@
-<p align="center">
-    <a href="https://hyva.io/" target="_blank">
-        <img src="./images/hyva-snippets-logo.png" alt="Hyvä snippets" width="225" height=100" />
-    </a>
-</p>
+# Hyvä Code Snippets
 
 # Hyvä Themes VSCode Snippets
 
 A collection of **Hyvä themes** code snippets for Visual Studio Code.
 
-If you don't know yet **Hyvä themes**, it's a **brand-new frontend for Magento 2** with a best DevExperience, Performance and Time to Market. Check it out on [hyva.io/](https://hyva.io/).
+If you don't know yet, [Hyvä Themes](https://hyva.io/) is a brand-new frontend for Magento 2 with a best Developer Experience, performance and time to market. 
 
-Most part of the snippets are inspired by the [Hyvä Documentation](https://docs.hyva.io/) itself.
+**[Check it out to hyva.io →](https://hyva.io/)**
+
+Most part of the snippets are inspired by the [Hyvä Documentation](https://docs.hyva.io/).
 
 ## Installation
 
-- Open the extension panel (`Ctrl + Shift + X` or `Cmd + Shift + X`)
+- Open the extensions panel with `Ctrl + Shift + X` or `Cmd + Shift + X`
 - Search for **Hyvä Code Snippets**
 - Click on Install
-- Enjoy :)
+
+You can also install it from the **[Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=BenoitAlix.hyva-vscode-snippets)**
 
 ## Snippets
 
