@@ -4,6 +4,8 @@ All notable changes to the "hyva-vscode-snippets" extension will be documented i
 
 ## [0.2.2]
 
+- Add Visual Studio Code badges to readme
+- Add new hyva extension logo
 - Update Hyva presentation in readme
 - Update extension installation instructions in readme
 - Add main Hyva Theme logo to readme
