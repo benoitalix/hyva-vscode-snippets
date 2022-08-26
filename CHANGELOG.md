@@ -2,6 +2,11 @@
 
 All notable changes to the "hyva-vscode-snippets" extension will be documented in this file.
 
+## [0.2.3]
+- Bring back all snippets files to one main JSON
+- Add missing template snippets variable dollar
+- Update logo name in package.json
+
 ## [0.2.2]
 
 - Add Visual Studio Code badges to readme
